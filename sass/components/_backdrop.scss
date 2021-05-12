@@ -1,0 +1,54 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop {
+  animation: animate150 2000ms;
+}
+
+@keyframes animate150 {
+  0% {
+    transform: scale(0.1);
+  }
+  30% {
+    transform: scale(1.25);
+  }
+
+  60% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  animation: close-animate 2000ms;
+}
+
+@keyframes close-animate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.5);
+    background-color: rgb(50, 14, 211);
+  }
+
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}

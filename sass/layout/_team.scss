@@ -1,0 +1,73 @@
+.team {
+  background-color: $light-theme-color;
+
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $white-color;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content-wrapper {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 24px;
+  }
+
+  &__title {
+    @include font($fs: 16px, $fw: 500, $lh: 19px);
+    color: $brand-title-color;
+    margin-bottom: 10px;
+  }
+
+  &__skill {
+    @include font($fs: 16px, $fw: 500, $lh: 19px);
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * #{$card-gap});
+      margin-top: calc(-1 * #{$card-gap});
+    }
+
+    &__item {
+      margin-left: #{$card-gap};
+      margin-top: #{$card-gap};
+      flex-basis: calc(100% / 2 - #{$card-gap});
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    &__item {
+      flex-basis: calc(100% / 3 - #{$card-gap});
+    }
+
+    &__content-wrapper {
+      padding: 30px 32px;
+    }
+  }
+}

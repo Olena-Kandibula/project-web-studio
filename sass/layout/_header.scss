@@ -1,0 +1,22 @@
+.header {
+  border-bottom: 1px solid $top-line-color;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.navigation {
+  margin-right: 84px;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+}

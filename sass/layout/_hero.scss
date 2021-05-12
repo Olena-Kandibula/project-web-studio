@@ -1,0 +1,95 @@
+.hero {
+  width: 100vw;
+  margin: 0 auto;
+  background: $background-color-hero;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero/hero-480@1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    font-family: $font-family-main;
+    @include font($fs: 26px, $fw: 900, $lh: 42px);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $white-color;
+    max-width: 360px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+.hero__title {
+  @media screen and (max-width: 390px) {
+    font-size: 6.4vw;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-480@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-768@1.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero/hero-768@2x.jpg");
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/hero-1600@1.jpg");
+
+    &__title {
+      @include font($fs: 44px, $fw: 900, $lh: 60px);
+      max-width: 696px;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero/hero-1600@2x.jpg");
+    }
+  }
+}

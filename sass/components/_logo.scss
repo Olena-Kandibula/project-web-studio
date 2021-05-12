@@ -1,0 +1,33 @@
+.logo {
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: $font-family-logo;
+  @include font($fs: 24px, $fw: 700, $lh: 28px);
+  color: $brand-accent-color;
+
+  &__dark-text {
+    color: $black-color;
+  }
+  &__light-text {
+    color: $white-color;
+  }
+
+  .footer & {
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font($fs: 26px, $fw: 700, $lh: 31px);
+  }
+}

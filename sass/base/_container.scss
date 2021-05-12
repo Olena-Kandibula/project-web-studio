@@ -1,0 +1,61 @@
+.container {
+  @include container-padding(15px, 15px);
+
+  .header & {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero & {
+    padding-top: 58px;
+    padding-bottom: 58px;
+    text-align: center;
+  }
+
+  .footer & {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+
+    .footer & {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+
+    .hero & {
+      padding-top: 106px;
+      padding-bottom: 106px;
+    }
+
+    .work & {
+      text-align: center;
+    }
+
+    .footer & {
+      display: flex;
+      justify-content: right;
+      align-items: baseline;
+      flex-wrap: nowrap;
+      text-align: left;
+    }
+  }
+}

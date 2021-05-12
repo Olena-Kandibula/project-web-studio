@@ -1,0 +1,38 @@
+.projects__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    display: flex;
+
+    flex-wrap: wrap;
+    margin-left: calc(-1 * #{$card-gap});
+    margin-top: calc(-1 * #{$card-gap});
+  }
+
+  .projects__item {
+    margin-left: #{$card-gap};
+    margin-top: #{$card-gap};
+    flex-basis: calc(100% / 2 - #{$card-gap});
+  }
+  .projects__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__content {
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    flex-basis: calc(100% / 3 - #{$card-gap});
+  }
+}
